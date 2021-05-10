@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id tournament:</strong>
+  <%= @fixture.id_tournament %>
+</p>
+
+<p>
+  <strong>Id match:</strong>
+  <%= @fixture.id_match %>
+</p>
+
+<p>
+  <strong>Round:</strong>
+  <%= @fixture.round %>
+</p>
+
+<p>
+  <strong>Local:</strong>
+  <%= @fixture.local %>
+</p>
+
+<p>
+  <strong>Visitor:</strong>
+  <%= @fixture.visitor %>
+</p>
+
+<p>
+  <strong>L goals:</strong>
+  <%= @fixture.l_goals %>
+</p>
+
+<p>
+  <strong>V goals:</strong>
+  <%= @fixture.v_goals %>
+</p>
+
+<%= link_to 'Edit', edit_fixture_path(@fixture) %> |
+<%= link_to 'Back', fixtures_path %>

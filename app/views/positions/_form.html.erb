@@ -1,0 +1,67 @@
+<%= form_with(model: position) do |form| %>
+  <% if position.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(position.errors.count, "error") %> prohibited this position from being saved:</h2>
+
+      <ul>
+        <% position.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :id_tournament %>
+    <%= form.number_field :id_tournament %>
+  </div>
+
+  <div class="field">
+    <%= form.label :id_team %>
+    <%= form.number_field :id_team %>
+  </div>
+
+  <div class="field">
+    <%= form.label :points %>
+    <%= form.number_field :points %>
+  </div>
+
+  <div class="field">
+    <%= form.label :played %>
+    <%= form.number_field :played %>
+  </div>
+
+  <div class="field">
+    <%= form.label :won %>
+    <%= form.number_field :won %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tied %>
+    <%= form.number_field :tied %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lost %>
+    <%= form.number_field :lost %>
+  </div>
+
+  <div class="field">
+    <%= form.label :goals_converted %>
+    <%= form.number_field :goals_converted %>
+  </div>
+
+  <div class="field">
+    <%= form.label :goals_received %>
+    <%= form.number_field :goals_received %>
+  </div>
+
+  <div class="field">
+    <%= form.label :goals_diference %>
+    <%= form.number_field :goals_diference %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

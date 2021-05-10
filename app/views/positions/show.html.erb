@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id tournament:</strong>
+  <%= @position.id_tournament %>
+</p>
+
+<p>
+  <strong>Id team:</strong>
+  <%= @position.id_team %>
+</p>
+
+<p>
+  <strong>Points:</strong>
+  <%= @position.points %>
+</p>
+
+<p>
+  <strong>Played:</strong>
+  <%= @position.played %>
+</p>
+
+<p>
+  <strong>Won:</strong>
+  <%= @position.won %>
+</p>
+
+<p>
+  <strong>Tied:</strong>
+  <%= @position.tied %>
+</p>
+
+<p>
+  <strong>Lost:</strong>
+  <%= @position.lost %>
+</p>
+
+<p>
+  <strong>Goals converted:</strong>
+  <%= @position.goals_converted %>
+</p>
+
+<p>
+  <strong>Goals received:</strong>
+  <%= @position.goals_received %>
+</p>
+
+<p>
+  <strong>Goals diference:</strong>
+  <%= @position.goals_diference %>
+</p>
+
+<%= link_to 'Edit', edit_position_path(@position) %> |
+<%= link_to 'Back', positions_path %>
