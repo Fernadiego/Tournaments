@@ -26,8 +26,16 @@ _Rails_
 > rails new tournaments -T
 ```
 
-### Scaffolds
+_Rspec_
 
+```
+> gem install rspec
+> rspec --init
+> rails generate model test _model name:string (Creo model_test para probar el ambiente)
+```
+
+### Scaffolds
+Generación de scaffolds Tournament, Fixture, Position, Match y Team
 ```
 > rails generate scaffold Tournament description:string
 > rails generate scaffold Fixture id_tournament:integer id_match:integer round:integer local:integer visitor:integer l_goals:integer v_goals:integer
