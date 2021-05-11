@@ -1,3 +1,9 @@
+# Proyecto de integración de React JS con Ruby on Rails.
+
+Ejercicio TORNEO DE VERANO para entrevista técnica CON SCV.
+
+## Tabla de Contenidos
+
 - [Requisitos](#requisitos)
 - [Comandos utilizados](#comandos_utilizados)
 - [Integración de ambientes](#integración_de_ambientes)
@@ -47,7 +53,7 @@ _React Rails_
 > rails g react:component HelloWorld greeting:string
 
 
-bundle add react_on_rails --strict 
+bundle add react_on_rails --strict
 bundle exec rails webpacker:install:react
 //ejecuta el generador de react and rails*sin esto no se crea el hello world
 rails generate react_on_rails:install
