@@ -109,4 +109,5 @@ Para la integracion de React probamos ingresando en:
 
 
 ### Tablas
-https://github.com/Fernadiego/Tournaments/blob/master/app/assets/images/dataBase.png
+![Tablas del sistema]
+(https://github.com/Fernadiego/Tournaments/blob/master/app/assets/images/dataBase.png)
