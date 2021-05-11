@@ -106,3 +106,7 @@ Para la integracion de React probamos ingresando en:
    y no se puede establecer prioridades en este sentido.
 
 ### Algoritmo preliminar del problema
+
+
+### Tablas
+https://github.com/Fernadiego/Tournaments/blob/master/app/assets/images/dataBase.png
