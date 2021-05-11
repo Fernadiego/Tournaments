@@ -34,6 +34,25 @@ _Rspec_
 > rails generate model test _model name:string (Creo model_test para probar el ambiente)
 ```
 
+_React Rails_
+
+```
+> gem install webpacker
+> gem install react-rails
+
+> rails webpacker:install
+> rails webpacker:install:react
+> rails generate react:install
+
+> rails g react:component HelloWorld greeting:string
+
+
+bundle add react_on_rails --strict 
+bundle exec rails webpacker:install:react
+//ejecuta el generador de react and rails*sin esto no se crea el hello world
+rails generate react_on_rails:install
+```
+
 ### Scaffolds
 
 Generación de scaffolds Tournament, Fixture, Position, Match y Team
