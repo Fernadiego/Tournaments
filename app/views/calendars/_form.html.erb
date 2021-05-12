@@ -1,10 +1,10 @@
-<%= form_with(model: @fixture) do |form| %>
-  <% if fixture.errors.any? %>
+<%= form_with(model: calendar) do |form| %>
+  <% if calendar.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@fixture.errors.count, "error") %> prohibited this fixture from being saved:</h2>
+      <h2><%= pluralize(calendar.errors.count, "error") %> prohibited this calendar from being saved:</h2>
 
       <ul>
-        <% @fixture.errors.each do |error| %>
+        <% calendar.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>

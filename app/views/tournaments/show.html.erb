@@ -5,5 +5,7 @@
   <%= @tournament.description %>
 </p>
 
-<%= link_to 'Edit', edit_tournament_path(@tournament) %> |
-<%= link_to 'Back', tournaments_path %>
+<%= link_to 'Editar Torneo', edit_tournament_path(@tournament) %> |
+<%= link_to 'Volver', tournaments_path %> |
+<%= link_to 'Generar Fixture', '/generate_fixture' %>
+

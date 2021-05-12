@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id tournament:</strong>
+  <%= @calendard.id_tournament %>
+</p>
+
+<p>
+  <strong>Id match:</strong>
+  <%= @calendard.id_match %>
+</p>
+
+<p>
+  <strong>Round:</strong>
+  <%= @calendard.round %>
+</p>
+
+<p>
+  <strong>Local:</strong>
+  <%= @calendard.local %>
+</p>
+
+<p>
+  <strong>Visitor:</strong>
+  <%= @calendard.visitor %>
+</p>
+
+<p>
+  <strong>L goals:</strong>
+  <%= @calendard.l_goals %>
+</p>
+
+<p>
+  <strong>V goals:</strong>
+  <%= @calendard.v_goals %>
+</p>
+
+<%= link_to 'Edit', edit_calendard_path(@calendard) %> |
+<%= link_to 'Back', calendards_path %>

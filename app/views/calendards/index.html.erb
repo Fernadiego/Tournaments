@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Calendards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id tournament</th>
+      <th>Id match</th>
+      <th>Round</th>
+      <th>Local</th>
+      <th>Visitor</th>
+      <th>L goals</th>
+      <th>V goals</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @calendards.each do |calendard| %>
+      <tr>
+        <td><%= calendard.id_tournament %></td>
+        <td><%= calendard.id_match %></td>
+        <td><%= calendard.round %></td>
+        <td><%= calendard.local %></td>
+        <td><%= calendard.visitor %></td>
+        <td><%= calendard.l_goals %></td>
+        <td><%= calendard.v_goals %></td>
+        <td><%= link_to 'Show', calendard %></td>
+        <td><%= link_to 'Edit', edit_calendard_path(calendard) %></td>
+        <td><%= link_to 'Destroy', calendard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Calendard', new_calendard_path %>

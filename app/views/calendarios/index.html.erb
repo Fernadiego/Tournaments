@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Calendarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Id tournament</th>
+      <th>Id match</th>
+      <th>Round</th>
+      <th>Local</th>
+      <th>Visitor</th>
+      <th>L goals</th>
+      <th>V goals</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @calendarios.each do |calendario| %>
+      <tr>
+        <td><%= calendario.id %></td>
+        <td><%= calendario.id_tournament %></td>
+        <td><%= calendario.id_match %></td>
+        <td><%= calendario.round %></td>
+        <td><%= calendario.local %></td>
+        <td><%= calendario.visitor %></td>
+        <td><%= calendario.l_goals %></td>
+        <td><%= calendario.v_goals %></td>
+        <td><%= link_to 'Show', calendario %></td>
+        <td><%= link_to 'Edit', edit_calendario_path(calendario) %></td>
+        <td><%= link_to 'Destroy', calendario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Calendario', new_calendario_path %>

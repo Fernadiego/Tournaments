@@ -2,18 +2,17 @@ import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
 const Tournaments = (props) => {
-  const [name, setName] = useState(props.name);
+  //const [name, setName] = useState(props.name);
+  const [clickPosiciones, setClickPosiciones] = useState(true);
+  const handleClick = () => setClickPosiciones(!clickPosiciones);
 
   return (
     <div>
-      <h3>Hello, {name}!</h3>
+      <ul>
+        <li><a href="/tournaments">Torneos</a></li>
+        <li><a href="/fixtures">Fixture</a></li>
+      </ul>
       <hr />
-      <form>
-        <label htmlFor="name">
-          Bienvenido Mr:
-          <input id="name" type="text" value={name} onChange={(e) => setName(e.target.value)} />
-        </label>
-      </form>
     </div>
   );
 };

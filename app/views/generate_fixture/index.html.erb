@@ -1,0 +1,35 @@
+<h1>Fixtures</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fixture ID</th>
+      <th>Torneo ID</th>
+      <th><strong>Round:</strong></th>
+      <th></th>
+       <th></th>
+        <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @matchs.each do |match| %>
+      <tr>
+        <td><%= match.id %></td>
+        <td><%= match.id_tournament %></td>
+        <td><%= match.id_match %></td>
+        <td><%= match.id_match %></td>
+        <td><%= match.local %></td>
+        <td><%= match.visitor %></td>
+        <td><%= match.l_goals %></td>
+        <td><%= match.v_goals %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+<br>
+<%= link_to 'View', fixtures_path %> |
+<%= link_to 'Generate Fixture', '/generate_fixture/create' %>

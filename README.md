@@ -37,14 +37,16 @@ _Rspec_
 ```
 > gem install rspec
 > rspec --init
-> rails generate model test _model name:string (Creo model_test para probar el ambiente)
 ```
 
-bundle add react_on_rails --strict
-bundle exec rails webpacker:install:react
-//ejecuta el generador de react and rails\*sin esto no se crea el hello world
-rails generate react_on_rails:install
+_React_
 
+```
+> bundle add react_on_rails --strict
+> bundle exec rails webpacker:install:react
+> rails generate react_on_rails:install
+
+> npm i bootstrap reactstrap
 ```
 
 ### Scaffolds
@@ -97,9 +99,78 @@ Para la integracion de React probamos ingresando en:
 7. Se asume que la distribucion de local y visitante se realiza equitativamente segun el orden en que aparecen los equipos
    y no se puede establecer prioridades en este sentido.
 
-### Algoritmo preliminar del problema
+### Algoritmos preliminares del problema
+
+```
+var teams = new Array ('River', 'Boca', 'Racing', 'Independiente');
+var matches = [];
+
+function invertMatch(match) {
+    let invert = `${ match.split('-')[1] }-${ match.split('-')[0] }`;
+    return invert;
+}
+
+function ifNotExistsMatchInsertPush(match) {
+    let inversoMatch = invertMatch(match);
+    if(matches.includes(inversoMatch))
+        return;
+
+    matches.push(match);
+    //console.log('matches: ');
+    //console.log(matches);
+}
+
+for (let i = 0; i < teams.length; i++) {
+    for (let j = 1; j < teams.length; j++) {
+        let match = teams[i] + '-' + teams[j];
+        if(i != j) {
+            if((i - 1) % 2 == 1) {
+                ifNotExistsMatchInsertPush(match);
+                console.log('True ' + match);
+            }
+            else {
+                ifNotExistsMatchInsertPush(match);
+                console.log('False ' + match) ;
+            }
+        }
+    }
+}
+console.log('FECHA 1');
+console.log(matches[0] + ' & ' + matches[5]);
+console.log('FECHA 2');
+console.log(matches[1] + ' & ' + matches[4]);
+console.log('FECHA 3');
+console.log(matches[2] + ' & ' + matches[3]);
+```
+
+```
+let number_of_rounds = 1
+let number_of_matches =2
+let matches_home = [];
+let matches_away = [];
+
+for (let i = 0; i <= number_of_rounds; i++) {
+    for (let j = 0; j <= number_of_matches; j++) {
+        let team_1 = teams[j];
+        let team_2 = teams[number_of_rounds - j];
+        matches_home << [team_1, team_2];
+        matches_away << [team_2, team_1];
+    }
+
+    let home_rounds = matches_home;
+    let away_rounds = matches_away;
+
+
+  last = teams.pop
+  teams.insert(1, last)
+
+}
+```
 
 ### Tablas
 
 [`Tablas del sistema`] (https://github.com/Fernadiego/Tournaments/blob/master/app/assets/images/dataBase.png)
+
+```
+
 ```
