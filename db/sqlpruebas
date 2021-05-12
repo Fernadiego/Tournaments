@@ -1,0 +1,60 @@
+USE DB_Fixture
+
+ALTER TABLE [dbo].[SCV_Team]
+ALTER COLUMN Description varchar(100);
+--insert into [DB_Fixture].[dbo].[SCV_Team] values (4,'Independiente')
+
+SELECT * FROM [dbo].[SCV_Team]
+SELECT * FROM SCV_Tournament
+SELECT * FROM SCV_Match
+SELECT * FROM SCV_Position
+
+--Tener un listado de los partidos a jugar (mostrar nombre de equipo 1, equipo 2 y número de fecha)
+SELECT L.Description,V.Description,M.Date 
+FROM SCV_Fixture F
+INNER JOIN SCV_Team L
+	ON F.Local = L.ID
+INNER JOIN SCV_Team V
+	ON F.Visitor = V.ID
+INNER JOIN SCV_Match M
+	ON F.ID_Tournament = M.ID_Tournament
+	AND F.ID_Match = M.ID
+WHERE F.ID_Tournament = 1
+
+--En base a la información de los resultados, se tiene que poder mostrar un listado con
+--las posiciones de cada equipo. (cada partido ganado suma 3 puntos, el empate 1 y la
+--derrota no suma puntos).
+--La tabla de posiciones debe mostrar los siguientes datos: posición, nombre, puntos,
+--partidos jugados, ganados, empatados y perdidos, y goles a favor, en contra y diferencia
+--de goles.
+--La posición del equipo se determina primero por la cantidad de puntos acumulados y
+--luego por la diferencia de goles.
+
+SELECT * FROM SCV_Position
+
+--PARTIDOS JUGADOS, GANADOS, EMPATADOS, PERDIDOS, GOLES + GOLES - DIFF
+
+USE [DB_Fixture]
+GO
+
+/****** Object:  Table [dbo].[SCV_Position]    Script Date: 10-5-2021 10:03:00 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[SCV_Position](
+	[ID] [int] NOT NULL,
+	[ID_Tournament] [int] NOT NULL,
+	[ID_Team] [int] NOT NULL,
+	[Points] [int] NOT NULL,
+	[Played] [int] NOT NULL,
+	[Won] [int] NOT NULL,
+	[Tied] [int] NOT NULL,
+	[Lost] [int] NOT NULL,
+	[Goals_Converted] [int] NOT NULL,
+	[Goals_Received] [int] NOT NULL,
+	[Goals_Difference] [int] NOT NULL
+) ON [PRIMARY]
+GO
