@@ -99,6 +99,7 @@ Para la integracion de React probamos ingresando en:
 7. Se asume que la distribucion de local y visitante se realiza equitativamente segun el orden en que aparecen los equipos
    y no se puede establecer prioridades en este sentido.
 
+<<<<<<< HEAD
 ### Algoritmos preliminares del problema
 
 ```
@@ -174,3 +175,11 @@ for (let i = 0; i <= number_of_rounds; i++) {
 ```
 
 ```
+=======
+### Algoritmo preliminar del problema
+
+
+### Tablas
+![Tablas del sistema]
+(https://github.com/Fernadiego/Tournaments/blob/master/app/assets/images/dataBase.png)
+>>>>>>> 03f4d69d345f7275ff70505bf3c966041fd6e4c5
