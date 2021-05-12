@@ -167,19 +167,11 @@ for (let i = 0; i <= number_of_rounds; i++) {
 
 }
 ```
-
-### Tablas
-
-[`Tablas del sistema`] (https://github.com/Fernadiego/Tournaments/blob/master/app/assets/images/dataBase.png)
-
-```
-
-```
 =======
 ### Algoritmo preliminar del problema
 
 
 ### Tablas
-![Tablas del sistema]
+[Tablas del sistema]
 (https://github.com/Fernadiego/Tournaments/blob/master/app/assets/images/dataBase.png)
->>>>>>> 03f4d69d345f7275ff70505bf3c966041fd6e4c5
+
