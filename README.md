@@ -6,7 +6,12 @@ Ejercicio TORNEO DE VERANO para entrevista técnica CON SCV.
 
 - [Requisitos](#requisitos)
 - [Comandos utilizados](#comandos_utilizados)
+- [Scaffolds](#Scaffolds)
+- [Testing](#Testing)
 - [Integración de ambientes](#integración_de_ambientes)
+- [Análisis preliminar del problema](#Análisis_preliminar_del_problema)
+- [Algoritmos preliminares del problema](#Algoritmos_preliminares_del_problema)
+- [### Algoritmo que resuelve el problema](#Algoritmo_que_resuelve_el_problema)
 
 ### Requisitos:
 
@@ -99,7 +104,7 @@ Para la integracion de React probamos ingresando en:
 7. Se asume que la distribucion de local y visitante se realiza equitativamente segun el orden en que aparecen los equipos
    y no se puede establecer prioridades en este sentido.
 
-<<<<<<< HEAD
+
 ### Algoritmos preliminares del problema
 
 ```
@@ -167,7 +172,6 @@ for (let i = 0; i <= number_of_rounds; i++) {
 
 }
 ```
-=======
 ### Algoritmo que resuelve el problema
 
 ```
