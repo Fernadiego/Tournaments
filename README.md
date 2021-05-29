@@ -1,6 +1,6 @@
 # Proyecto de integración de React JS con Ruby on Rails.
 
-Ejercicio TORNEO DE VERANO para entrevista técnica CON SCV.
+Ejercicio TORNEO DE VERANO.
 
 ## Tabla de Contenidos
 
